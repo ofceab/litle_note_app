@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Note App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+
+<body>
+    <header class="header">
+        <div class="btn">
+            +
+        </div>
+        <div class="header-content">
+            <h1>Always keep your notes safe, with us</h1>
+            <h3>We provide you free online server to store your data</h3>
+            <a href="/note" class="get-started-btn">Get Started</a>
+        </div>
+
+    </header>
+    <section class="notes-info">
+        <h2 class="infos-title">More secure way to store</h2>
+        <div class="infos">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eaque voluptate ab tempore, dolores omnis
+            ad
+            corporis cupiditate possimus incidunt iusto provident consectetur quia atque porro doloremque non eligendi
+            necessitatibus placeat fuga quibusdam. Quaerat eligendi cumque illum! Ratione ex esse, harum nobis vero
+            recusandae quasi eaque ut saepe, beatae illo quis dolores veniam, iusto totam voluptatibus aperiam quod.
+            Possimus, assumenda perferendis praesentium nulla cupiditate architecto odio vero recusandae accusantium
+            delectus?
+        </div>
+        <div class="notes-container">
+            <div class="note">
+                <pre>
+                <code>
+/// Save an Orders products
+Future<bool> ordersProducts(Map<String, dynamic> data) async {
+    try {
+        DocumentReference docRef =
+        await firebaseFirestore.collection('orders').add(data);
+        if (docRef != null) {
+            return true;
+        }
+
+        return null;
+    } on FirebaseException catch (e) {
+        print(e.message);
+        return false;
+        }
+    catch (e) {
+        return false;
+    }
+}
+
+                </code>
+            </pre>
+            </div>
+            <div class="note">
+                <pre>
+                    <code>
+Future<String> updateProduct(
+    Map<String, dynamic> data, String category, String documentID) async {
+    try {
+        if (categoriesList.contains(category)) {
+            firebaseFirestore.collection(category).doc(documentID).update(data);
+    }
+
+        return 'success';
+    } on FirebaseException catch (e) {
+        return e.message;
+    } catch (e) {
+        return e.toString();
+    }
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <!-- Here calling the main.js file  -->
+    <script src='js/main.js'></script>
+</body>
+
+</html>

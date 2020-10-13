@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&display=swap');
+
+body{
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+/* Header here  */
+header.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    background:linear-gradient(to right top,#050505c9, #050505c9),url(https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/macos-catalina-ios13-iphone-xs-share-notes-hero.jpg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+    clip-path: polygon(0% 0%,90% 0%,100% 30%,100% 100%, 0% 80%,0% 0%);
+}
+
+.get-started-btn{
+    margin-top: 50px !important;
+    padding: 15px 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border: 3px solid white;
+    background-color: transparent;
+}
+
+.header-content{
+    text-align: center;
+}
+.header-content h1{
+    color: white;
+    font-weight: lighter;
+    font-size: 5rem;
+}
+.header-content h3{
+    color: white;
+    font-weight: 400;
+    line-height: 3.5rem;
+    color: orange;
+    font-size: 1.7rem;
+    margin-bottom: 1.9rem;
+}
+
+
+
+
+/* Notes part  */
+.notes-info{
+    min-height: 400px;
+}
+.notes-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+}
+.note{
+    padding: 1rem;
+    position: relative;
+    top: -25rem;
+    flex: 2;
+    display: flex;
+    justify-content: stretch;    
+    align-items: center;
+    border-radius: 25px;
+    height: 400px;
+}
+.note:first-child{
+    background-color: rgb(3, 0, 47);
+    color: wheat;
+    margin-right: 4rem;
+    font-size: 0.8rem;
+}
+.note:last-child{
+    background-color: orange;
+    color:  rgb(3, 0, 47);
+    font-size: 0.8rem;
+}
+
+.btn{
+    position: fixed;
+    z-index: 5;
+    color: white;
+    font-size:35px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    margin: 0.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: orange;
+}
+
+
+/* infos part  */
+.infos-title{
+    margin-left: 2rem;
+    content: 'More secure way to store';
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+}
+.infos{
+    position: relative;
+    top: 2rem;
+    line-height: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    width: 20%;
+}
